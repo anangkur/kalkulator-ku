@@ -19,183 +19,293 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="eeE-Dy-815" userLabel="mainStackView">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8er-Dn-83w" userLabel="zeroRowStackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="105"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAw-2V-2lp" userLabel="historyLabel">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="105"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="7gw-aC-jAD" userLabel="firstRowStackView">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="123.33333333333333"/>
+                                        <rect key="frame" x="0.0" y="109" width="393" height="105"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJY-9r-42J" userLabel="resultLabel">
-                                                <rect key="frame" x="8" y="8" width="377" height="107.33333333333333"/>
-                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="8" y="8" width="377" height="89"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="CjY-Ox-YBm" userLabel="secondRowStackView">
-                                        <rect key="frame" x="0.0" y="127.33333333333334" width="393" height="123"/>
+                                        <rect key="frame" x="0.0" y="218" width="393" height="105"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYg-jW-qRS" userLabel="acLabel">
-                                                <rect key="frame" x="0.0" y="0.0" width="95.333333333333329" height="123"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D21-Fc-Rkz" userLabel="acButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="95.333333333333329" height="105"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+/-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPA-KI-DQk" userLabel="plusMinusLabel">
-                                                <rect key="frame" x="99.333333333333343" y="0.0" width="95.333333333333343" height="123"/>
+                                                <color key="tintColor" systemColor="tintColor"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="AC">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="acButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q8G-hL-36f"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="me3-u5-eVT" userLabel="plusMinusButton">
+                                                <rect key="frame" x="99.333333333333343" y="0.0" width="95.333333333333343" height="105"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hqc-DW-AJP" userLabel="percentLabel">
-                                                <rect key="frame" x="198.66666666666666" y="0.0" width="94.999999999999972" height="123"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="+/-">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="plusMinusButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ga3-vW-ozN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDS-D4-OCw" userLabel="percentButton">
+                                                <rect key="frame" x="198.66666666666666" y="0.0" width="94.999999999999972" height="105"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgX-2K-GaH" userLabel="divideLabel">
-                                                <rect key="frame" x="297.66666666666669" y="0.0" width="95.333333333333314" height="123"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="%">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="percentButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m9a-2Q-c2V"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAz-yD-Kvr" userLabel="divideButton">
+                                                <rect key="frame" x="297.66666666666669" y="0.0" width="95.333333333333314" height="105"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="/">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="divideButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Soz-6i-GXL"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Q6q-Lr-GUq" userLabel="thirdRowStackView">
-                                        <rect key="frame" x="0.0" y="254.33333333333334" width="393" height="123.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="327" width="393" height="105"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaH-rh-IKK" userLabel="sevenLabel">
-                                                <rect key="frame" x="0.0" y="0.0" width="95.333333333333329" height="123.33333333333333"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yj-S8-O1I" userLabel="sevenButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="95.333333333333329" height="105"/>
                                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffa-tb-5z4" userLabel="eightLabel">
-                                                <rect key="frame" x="99.333333333333343" y="0.0" width="95.333333333333343" height="123.33333333333333"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="sevenButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iJJ-S5-tBx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1V-eq-Wfc" userLabel="eightButton">
+                                                <rect key="frame" x="99.333333333333343" y="0.0" width="95.333333333333343" height="105"/>
                                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIp-n8-I1D" userLabel="nineLabel">
-                                                <rect key="frame" x="198.66666666666666" y="0.0" width="94.999999999999972" height="123.33333333333333"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="eightButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zrb-ax-pYy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSi-i5-ZFq" userLabel="nineButton">
+                                                <rect key="frame" x="198.66666666666666" y="0.0" width="94.999999999999972" height="105"/>
                                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Iw-MU-2M3" userLabel="multiplyLabel">
-                                                <rect key="frame" x="297.66666666666669" y="0.0" width="95.333333333333314" height="123.33333333333333"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="nineButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="axG-Sp-FG9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCu-PY-Sr1" userLabel="multiplyButton">
+                                                <rect key="frame" x="297.66666666666669" y="0.0" width="95.333333333333314" height="105"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="X">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="multiplyButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KtE-gk-2fb"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="oUs-56-DMf" userLabel="forthRowStackView">
-                                        <rect key="frame" x="0.0" y="381.66666666666669" width="393" height="123"/>
+                                        <rect key="frame" x="0.0" y="436" width="393" height="105"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoV-4D-Pbg" userLabel="fourLabel">
-                                                <rect key="frame" x="0.0" y="0.0" width="95.333333333333329" height="123"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWe-09-4Bj" userLabel="fourButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="95.333333333333329" height="105"/>
                                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6N1-9g-750" userLabel="fiveLabel">
-                                                <rect key="frame" x="99.333333333333343" y="0.0" width="95.333333333333343" height="123"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="fourButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Eb-zM-dfZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QC7-CP-Txt" userLabel="fiveButton">
+                                                <rect key="frame" x="99.333333333333343" y="0.0" width="95.333333333333343" height="105"/>
                                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="523-p2-mlJ" userLabel="sixLabel">
-                                                <rect key="frame" x="198.66666666666666" y="0.0" width="94.999999999999972" height="123"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="fiveButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fXm-yk-8AK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQo-hU-c7x" userLabel="sixButton">
+                                                <rect key="frame" x="198.66666666666666" y="0.0" width="94.999999999999972" height="105"/>
                                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rs0-3e-QZZ" userLabel="minusLabel">
-                                                <rect key="frame" x="297.66666666666669" y="0.0" width="95.333333333333314" height="123"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="sixButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oao-SD-YcQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFP-FZ-MmJ" userLabel="minusButton">
+                                                <rect key="frame" x="297.66666666666669" y="0.0" width="95.333333333333314" height="105"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="-">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="minusButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DEl-a0-pjO"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="LpJ-X4-Fqa" userLabel="fifthRowStackView">
-                                        <rect key="frame" x="0.0" y="508.66666666666657" width="393" height="123.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="545" width="393" height="105"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9N-0a-D5Q" userLabel="oneLabel">
-                                                <rect key="frame" x="0.0" y="0.0" width="95.333333333333329" height="123.33333333333333"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AL9-Bs-a1v" userLabel="oneButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="95.333333333333329" height="105"/>
                                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTU-bm-mNf" userLabel="twoLabel">
-                                                <rect key="frame" x="99.333333333333343" y="0.0" width="95.333333333333343" height="123.33333333333333"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="oneButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ica-al-pch"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGY-eO-diL" userLabel="twoButton">
+                                                <rect key="frame" x="99.333333333333343" y="0.0" width="95.333333333333343" height="105"/>
                                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLJ-VA-sWV" userLabel="threeLabel">
-                                                <rect key="frame" x="198.66666666666666" y="0.0" width="94.999999999999972" height="123.33333333333333"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="twoButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="odd-Ov-cxc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJX-AL-aaS" userLabel="threeButton">
+                                                <rect key="frame" x="198.66666666666666" y="0.0" width="94.999999999999972" height="105"/>
                                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NN8-1C-Unk" userLabel="plusLabel">
-                                                <rect key="frame" x="297.66666666666669" y="0.0" width="95.333333333333314" height="123.33333333333333"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="threeButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c4Z-91-HIH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPd-6u-AH1" userLabel="plusButton">
+                                                <rect key="frame" x="297.66666666666669" y="0.0" width="95.333333333333314" height="105"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="+">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="plusButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ut6-dT-pbc"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="cff-li-Htp" userLabel="sixthRowStackView">
-                                        <rect key="frame" x="0.0" y="636" width="393" height="123"/>
+                                        <rect key="frame" x="0.0" y="654" width="393" height="105"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQn-9g-WoS" userLabel="zeroLabel">
-                                                <rect key="frame" x="0.0" y="0.0" width="192.66666666666666" height="123"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0Q-c3-Wl1" userLabel="zeroButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="192.66666666666666" height="105"/>
                                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXo-PS-ZDm" userLabel="dotLabel">
-                                                <rect key="frame" x="196.66666666666666" y="0.0" width="95.999999999999972" height="123"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="zeroButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d0D-Mg-iMj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9Q-ni-FOj" userLabel="dotButton">
+                                                <rect key="frame" x="196.66666666666666" y="0.0" width="95.999999999999972" height="105"/>
                                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="how-U1-hOX" userLabel="equalLabel">
-                                                <rect key="frame" x="296.66666666666669" y="0.0" width="96.333333333333314" height="123"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title=".">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="dotButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ybN-6I-LZG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ov-j7-HyA" userLabel="equalButton">
+                                                <rect key="frame" x="296.66666666666669" y="0.0" width="96.333333333333314" height="105"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="=">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="equalButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J8u-eo-HDc"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="nQn-9g-WoS" firstAttribute="width" secondItem="IXo-PS-ZDm" secondAttribute="width" multiplier="2" id="Sns-HN-78x"/>
-                                            <constraint firstItem="IXo-PS-ZDm" firstAttribute="width" secondItem="how-U1-hOX" secondAttribute="width" id="byN-Yv-14n"/>
+                                            <constraint firstItem="Q9Q-ni-FOj" firstAttribute="width" secondItem="9Ov-j7-HyA" secondAttribute="width" id="abH-gI-h7X"/>
+                                            <constraint firstItem="i0Q-c3-Wl1" firstAttribute="width" secondItem="Q9Q-ni-FOj" secondAttribute="width" multiplier="2" id="zMI-xw-bQ5"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -207,6 +317,10 @@
                             <constraint firstItem="eeE-Dy-815" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="x4G-KZ-yRa"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="historyLabel" destination="rAw-2V-2lp" id="fsj-wr-PWg"/>
+                        <outlet property="resultLabel" destination="CJY-9r-42J" id="yIP-PI-Q4i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -222,6 +336,9 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
