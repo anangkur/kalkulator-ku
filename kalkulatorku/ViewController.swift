@@ -24,27 +24,21 @@ class ViewController: UIViewController {
     
     @IBAction func acButtonClicked(_ sender: Any) {
         resultLabel.text = "0"
+        historyLabel.text = ""
         firstNumber = nil
         secondNumber = nil
     }
     
-    @IBAction func plusMinusButtonClicked(_ sender: Any) {
-        if resultLabel.text != "0" && resultLabel.text!.first != "-" {
-            resultLabel.text = "-" + resultLabel.text!
-        } else if resultLabel.text != "0" && resultLabel.text!.first == "-" {
-            resultLabel.text?.removeFirst()
-        }
-    }
-    
-    @IBAction func percentButtonClicked(_ sender: Any) {
-        if resultLabel.text != "0" && resultLabel.text!.last != "%" {
-            resultLabel.text = resultLabel.text! + "%"
-        } else if resultLabel.text != "0" && resultLabel.text!.last == "%" {
+    @IBAction func deleteButtonClicked(_ sender: Any) {
+        if resultLabel.text!.count > 1 {
             resultLabel.text!.removeLast()
+        } else if resultLabel.text!.count <= 1 {
+            resultLabel.text = "0"
         }
     }
     
     @IBAction func divideButtonClicked(_ sender: Any) {
+        evaluateResult()
         appendOperator(operatorValue: "/")
     }
     
@@ -61,6 +55,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func multiplyButtonClicked(_ sender: Any) {
+        evaluateResult()
         appendOperator(operatorValue: "X")
     }
     
@@ -77,6 +72,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func minusButtonClicked(_ sender: Any) {
+        evaluateResult()
         appendOperator(operatorValue: "-")
     }
     
@@ -93,26 +89,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func plusButtonClicked(_ sender: Any) {
-        if firstNumber == nil {
-            firstNumber = resultLabel.text!
-        } else {
-            secondNumber = resultLabel.text!
-                .replacingOccurrences(of: firstNumber!, with: "")
-                .replacingOccurrences(of: "+", with: "")
-                .replacingOccurrences(of: "-", with: "")
-                .replacingOccurrences(of: "X", with: "")
-                .replacingOccurrences(of: "/", with: "")
-        }
-        if secondNumber != nil || secondNumber != "" {
-            historyLabel.text = historyLabel.text ?? "" + resultLabel.text!
-            if firstNumber!.contains(".") || secondNumber!.contains(".") {
-                firstNumber = "\(Double(firstNumber!)! + Double(secondNumber!)!)"
-            } else {
-                firstNumber = "\(Int(firstNumber!)! + Int(secondNumber!)!)"
-            }
-            secondNumber = nil
-        }
-        resultLabel.text = String(firstNumber!)
+        evaluateResult()
         appendOperator(operatorValue: "+")
     }
 
@@ -138,7 +115,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func equalButtonClicked(_ sender: Any) {
-        
+        evaluateResult()
     }
 
     private func appendNumber(number: String) {
@@ -171,6 +148,58 @@ class ViewController: UIViewController {
             resultLabel.text!.removeLast()
             resultLabel.text = resultLabel.text! + operatorValue
         }
+    }
+    
+    private func evaluateResult() {
+        var operatorValue: String = ""
+        if resultLabel.text!.contains("+") {
+            operatorValue = "+"
+        } else if resultLabel.text!.contains("-") {
+            operatorValue = "-"
+        } else if resultLabel.text!.contains("X") {
+            operatorValue = "X"
+        } else if resultLabel.text!.contains("/") {
+            operatorValue = "/"
+        }
+        if firstNumber == nil {
+            firstNumber = resultLabel.text!
+        } else {
+            secondNumber = resultLabel.text!
+                .replacingOccurrences(of: firstNumber!, with: "")
+                .replacingOccurrences(of: "+", with: "")
+                .replacingOccurrences(of: "-", with: "")
+                .replacingOccurrences(of: "X", with: "")
+                .replacingOccurrences(of: "/", with: "")
+        }
+        if secondNumber != nil && secondNumber != "" {
+            historyLabel.text = resultLabel.text!
+            if firstNumber!.contains(".") ||
+                secondNumber!.contains(".") ||
+                historyLabel.text!.contains("/")
+            {
+                if operatorValue == "+" {
+                    firstNumber = "\(Double(firstNumber!)! + Double(secondNumber!)!)"
+                } else if operatorValue == "-" {
+                    firstNumber = "\(Double(firstNumber!)! - Double(secondNumber!)!)"
+                } else if operatorValue == "X" {
+                    firstNumber = "\(Double(firstNumber!)! * Double(secondNumber!)!)"
+                } else if operatorValue == "/" {
+                    firstNumber = "\(Double(firstNumber!)! / Double(secondNumber!)!)"
+                }
+            } else {
+                if operatorValue == "+" {
+                    firstNumber = "\(Int(firstNumber!)! + Int(secondNumber!)!)"
+                } else if operatorValue == "-" {
+                    firstNumber = "\(Int(firstNumber!)! - Int(secondNumber!)!)"
+                } else if operatorValue == "X" {
+                    firstNumber = "\(Int(firstNumber!)! * Int(secondNumber!)!)"
+                } else if operatorValue == "/" {
+                    firstNumber = "\(Int(firstNumber!)! / Int(secondNumber!)!)"
+                }
+            }
+            secondNumber = nil
+        }
+        resultLabel.text = String(firstNumber!)
     }
 }
 
